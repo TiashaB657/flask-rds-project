@@ -21,7 +21,7 @@ def get_connection():
 
 @app.route("/")
 def home():
-    return "Flask + RDS MySQL running!"
+    return "Deployed via CI/CD 🚀"
 
 @app.route("/users")
 def get_users():
