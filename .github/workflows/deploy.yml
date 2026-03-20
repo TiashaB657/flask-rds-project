@@ -27,3 +27,7 @@ jobs:
           git pull origin main
           sudo systemctl restart flaskapp
           EOF
+
+          - name: Test SSH
+            run: |
+              ssh -vvv -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}
